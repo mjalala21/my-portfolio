@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> my Portfolio</title>
-   <link rel="stylesheet" href="portfolio.css"> 
+   <link rel="stylesheet" href="portfolio.css">
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "hcr2G8aR6janYCtoY",
+      });
+   })();
+</script> 
 </head>
 <body>
     <div class="maindiv">
@@ -43,7 +53,7 @@
           <section class="about" id="about">
            
             
-            <div class="t1"></div>
+         <div class="t1"></div>
                <div class="tt1"><h1>About Me</h1>
                 
                  <div>I am a passionate beginner web developer with a strong interest in creating clean, responsive, and user-friendly websites. My journey in web development started with learning HTML and CSS, where I built practical projects such as registration forms, personal details forms, navigation bars, list-based layouts, and responsive webpage sections.
@@ -123,14 +133,15 @@ I enjoy turning simple ideas into functional and visually organized designs whil
      <div class="t5">
         <div >
             <form class="form">
-        <input type="text" name="name" placeholder="Your Name...">
-        <input type="email" name="email" placeholder="Your E-mail...">
-        <textarea placeholder="subject"   rows="9" cols="20"></textarea>
+        <input type="text" name="name" id="name" placeholder="Your Name...">
+        <input type="email" name="email" id="email" placeholder="Your E-mail...">
+        <textarea name="sub" placeholder="subject" id="sub"  rows="9" cols="20"></textarea>
          </div>
          <div>
-           <textarea placeholder="your Message..." rows="15" cols="50"></textarea> <br>
-           <input type="submit" value="SEND!" id="send">
+           <textarea name="mssg" id="mssg" placeholder="your Message..." rows="15" cols="50"></textarea> <br>
+           <button type="button" id="btn" onclick="sendEmail()" value="SEND!">Send!</button>
            </form>
+           <script type="text/javascript" src="script.js"></script>
            </div>
      </div>
             
